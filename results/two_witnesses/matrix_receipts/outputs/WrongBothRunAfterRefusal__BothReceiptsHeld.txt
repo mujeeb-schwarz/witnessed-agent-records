@@ -1,0 +1,28 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 72 and seed 4189167714535749469 with 4 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 61540] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file wrong/WrongBothRunAfterRefusal.tla
+Parsing file GateBothWitnesses.tla
+Parsing file /private$TMPDIR/Naturals.tla
+Parsing file /private$TMPDIR/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module GateBothWitnesses
+Semantic processing of module WrongBothRunAfterRefusal
+Starting... (2026-11-23 02:42:52)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 02:42:52.
+Progress(16) at 2026-11-23 02:42:55: 2,158,847 states generated (2,158,847 s/min), 449,431 distinct states found (449,431 ds/min), 231,109 states left on queue.
+Progress(21) at 2026-11-23 02:43:55: 48,242,315 states generated (46,083,468 s/min), 6,812,884 distinct states found (6,363,453 ds/min), 1,975,159 states left on queue.
+Progress(24) at 2026-11-23 02:44:55: 92,081,392 states generated (43,839,077 s/min), 11,400,682 distinct states found (4,587,798 ds/min), 1,598,905 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 7.8E-5
+  based on the actual fingerprints:  val = 7.4E-6
+119503246 states generated, 13677426 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 32.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 12 and the 95th percentile is 3).
+Finished in 02min 42s at (2026-11-23 02:45:35)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

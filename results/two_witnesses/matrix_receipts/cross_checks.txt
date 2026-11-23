@@ -1,0 +1,4 @@
+x1_GateBothWitnesses | No error has been found | 4207410 distinct states found | 52s
+x2_Live1 | No error has been found | 5400 distinct states found | 1s
+x3_WrongBothNoResendFairness | Error: Temporal properties were violated | 5400 distinct states found | 1s
+x4_Live2 | stopped at 06:08 after about 8 h 45 min in its liveness phase, no verdict | 4207410 distinct states found (safety phase) | -

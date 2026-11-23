@@ -1,0 +1,190 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 55 and seed -974670433374279781 with 4 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 67659] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file wrong/WrongBothStampWithoutAdding.tla
+Parsing file GateBothWitnesses.tla
+Parsing file /private$TMPDIR/Naturals.tla
+Parsing file /private$TMPDIR/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module GateBothWitnesses
+Semantic processing of module WrongBothStampWithoutAdding
+Starting... (2026-11-23 03:35:35)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 03:35:35.
+Error: Invariant BothListsHoldStarted is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ stampsInFlight = [main |-> {}, backup |-> {}]
+/\ witnessList = [main |-> <<>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {}, backup |-> {}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {}, backup |-> {}]
+/\ status = (a1 :> "idle" @@ a2 :> "idle")
+/\ receipts = [main |-> {}, backup |-> {}]
+/\ effects = {}
+
+State 2: <Propose line 202, col 5 to line 205, col 39 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {}, backup |-> {}]
+/\ witnessList = [main |-> <<>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {}, backup |-> {}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {}, backup |-> {}]
+/\ status = (a1 :> "idle" @@ a2 :> "proposed")
+/\ receipts = [main |-> {}, backup |-> {}]
+/\ effects = {}
+
+State 3: <Propose line 202, col 5 to line 205, col 39 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {}, backup |-> {}]
+/\ witnessList = [main |-> <<>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {}, backup |-> {}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {}, backup |-> {}]
+/\ status = (a1 :> "proposed" @@ a2 :> "proposed")
+/\ receipts = [main |-> {}, backup |-> {}]
+/\ effects = {}
+
+State 4: <WriteInJournal line 209, col 5 to line 213, col 39 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {}, backup |-> {}]
+/\ witnessList = [main |-> <<>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {}, backup |-> {}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {}, backup |-> {}]
+/\ status = (a1 :> "journaled" @@ a2 :> "proposed")
+/\ receipts = [main |-> {}, backup |-> {}]
+/\ effects = {}
+
+State 5: <SendFingerprint line 218, col 5 to line 224, col 32 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {}, backup |-> {}]
+/\ witnessList = [main |-> <<>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "waiting" @@ a2 :> "proposed")
+/\ receipts = [main |-> {}, backup |-> {}]
+/\ effects = {}
+
+State 6: <WitnessStamps line 229, col 5 to line 233, col 66 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "waiting" @@ a2 :> "proposed")
+/\ receipts = [main |-> {}, backup |-> {}]
+/\ effects = {}
+
+State 7: <StampArrives line 247, col 5 to line 254, col 39 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "waiting" @@ a2 :> "proposed")
+/\ receipts = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ effects = {}
+
+State 8: <Run line 268, col 5 to line 273, col 76 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 0
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a1, kind |-> "approved"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "ran" @@ a2 :> "proposed")
+/\ receipts = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ effects = {a1}
+
+State 9: <GateCrash line 304, col 5 to line 312, col 71 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 1
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a1, kind |-> "approved"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "ran" @@ a2 :> "lost")
+/\ receipts = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ effects = {a1}
+
+State 10: <StampWithoutAdding line 15, col 5 to line 20, col 52 of module WrongBothStampWithoutAdding>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 1
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a1, kind |-> "approved"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "ran" @@ a2 :> "lost")
+/\ receipts = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ effects = {a1}
+
+State 11: <RecordLateReceipt line 260, col 5 to line 263, col 52 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 1
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a1, kind |-> "approved"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ status = (a1 :> "ran" @@ a2 :> "lost")
+/\ receipts = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ effects = {a1}
+
+State 12: <LoseFingerprint line 287, col 5 to line 290, col 52 of module GateBothWitnesses>
+/\ stampsInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ witnessList = [main |-> <<<<"fingerprint", a1>>>>, backup |-> <<>>]
+/\ witnessUp = [main |-> TRUE, backup |-> TRUE]
+/\ gateCrashes = 1
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a1, kind |-> "approved"]}
+/\ witnessCrashes = [main |-> 0, backup |-> 0]
+/\ asked = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ stampsHeld = [main |-> {}, backup |-> {}]
+/\ fpInFlight = [main |-> {<<"fingerprint", a1>>}, backup |-> {}]
+/\ status = (a1 :> "ran" @@ a2 :> "lost")
+/\ receipts = [main |-> {<<"fingerprint", a1>>}, backup |-> {<<"fingerprint", a1>>}]
+/\ effects = {a1}
+
+162277 states generated, 41436 distinct states found, 24672 states left on queue.
+The depth of the complete state graph search is 12.
+The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 16 and the 95th percentile is 6).
+Finished in 00s at (2026-11-23 03:35:36)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

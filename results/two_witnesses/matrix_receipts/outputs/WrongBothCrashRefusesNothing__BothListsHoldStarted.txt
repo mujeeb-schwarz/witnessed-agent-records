@@ -1,0 +1,27 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 113 and seed 3488091462134951302 with 4 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 37342] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file wrong/WrongBothCrashRefusesNothing.tla
+Parsing file GateBothWitnesses.tla
+Parsing file /private$TMPDIR/Naturals.tla
+Parsing file /private$TMPDIR/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module GateBothWitnesses
+Semantic processing of module WrongBothCrashRefusesNothing
+Starting... (2026-11-23 01:41:36)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 01:41:36.
+Progress(17) at 2026-11-23 01:41:39: 2,266,110 states generated (2,266,110 s/min), 444,253 distinct states found (444,253 ds/min), 216,510 states left on queue.
+Progress(24) at 2026-11-23 01:42:39: 49,407,883 states generated (47,141,773 s/min), 6,197,844 distinct states found (5,753,591 ds/min), 748,735 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 2.0E-5
+  based on the actual fingerprints:  val = 3.7E-5
+60351199 states generated, 7083954 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 30.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 13 and the 95th percentile is 3).
+Finished in 01min 18s at (2026-11-23 01:42:55)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

@@ -1,0 +1,30 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 110 and seed 1591596055730835575 with 4 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 68442] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file wrong/WrongBothStampWithoutAdding.tla
+Parsing file GateBothWitnesses.tla
+Parsing file /private$TMPDIR/Naturals.tla
+Parsing file /private$TMPDIR/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module GateBothWitnesses
+Semantic processing of module WrongBothStampWithoutAdding
+Starting... (2026-11-23 03:52:28)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 03:52:28.
+Progress(15) at 2026-11-23 03:52:31: 1,949,192 states generated (1,949,192 s/min), 382,383 distinct states found (382,383 ds/min), 206,322 states left on queue.
+Progress(20) at 2026-11-23 03:53:31: 44,998,035 states generated (43,048,843 s/min), 6,204,799 distinct states found (5,822,416 ds/min), 2,046,123 states left on queue.
+Progress(22) at 2026-11-23 03:54:31: 86,070,874 states generated (41,072,839 s/min), 10,969,412 distinct states found (4,764,613 ds/min), 2,691,183 states left on queue.
+Progress(23) at 2026-11-23 03:55:31: 126,474,602 states generated (40,403,728 s/min), 15,165,629 distinct states found (4,196,217 ds/min), 2,524,453 states left on queue.
+Progress(25) at 2026-11-23 03:56:31: 165,751,227 states generated (39,276,625 s/min), 18,836,455 distinct states found (3,670,826 ds/min), 1,505,640 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.9E-4
+  based on the actual fingerprints:  val = 7.8E-5
+188602558 states generated, 20632626 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 31.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 16 and the 95th percentile is 3).
+Finished in 04min 39s at (2026-11-23 03:57:08)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

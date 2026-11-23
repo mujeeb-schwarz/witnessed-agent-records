@@ -1,0 +1,29 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 78 and seed 8199516855147938429 with 4 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 43566] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file wrong/WrongBothFingerprintBeforeJournal.tla
+Parsing file GateBothWitnesses.tla
+Parsing file /private$TMPDIR/Naturals.tla
+Parsing file /private$TMPDIR/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module GateBothWitnesses
+Semantic processing of module WrongBothFingerprintBeforeJournal
+Starting... (2026-11-23 01:53:21)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 01:53:21.
+Progress(14) at 2026-11-23 01:53:24: 2,269,366 states generated (2,269,366 s/min), 499,100 distinct states found (499,100 ds/min), 264,122 states left on queue.
+Progress(20) at 2026-11-23 01:54:24: 49,718,361 states generated (47,448,995 s/min), 7,454,663 distinct states found (6,955,563 ds/min), 2,078,672 states left on queue.
+Progress(22) at 2026-11-23 01:55:24: 93,241,481 states generated (43,523,120 s/min), 12,483,141 distinct states found (5,028,478 ds/min), 1,906,115 states left on queue.
+Progress(27) at 2026-11-23 01:56:24: 135,997,261 states generated (42,755,780 s/min), 16,643,421 distinct states found (4,160,280 ds/min), 186,555 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.1E-4
+  based on the actual fingerprints:  val = 3.6E-6
+137422990 states generated, 16738866 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 30.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 12 and the 95th percentile is 4).
+Finished in 03min 06s at (2026-11-23 01:56:27)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

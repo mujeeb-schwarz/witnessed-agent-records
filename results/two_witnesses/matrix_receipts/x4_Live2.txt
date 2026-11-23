@@ -1,0 +1,29 @@
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 59 and seed -259298344209582519 with 4 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 27389] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file GateBothWitnesses.tla
+Parsing file <tmp>/Naturals.tla
+Parsing file <tmp>/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module GateBothWitnesses
+Starting... (2026-11-22 21:11:02)
+Implied-temporal checking--satisfiability problem has 2 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-22 21:11:02.
+Checking 2 branches of temporal properties for the current state space with 122550 total distinct states at (2026-11-22 21:11:05)
+Finished checking temporal properties in 05min 01s at 2026-11-22 21:16:07
+Progress(14) at 2026-11-22 21:16:07: 246,715 states generated (246,715 s/min), 61,275 distinct states found (61,275 ds/min), 30,914 states left on queue.
+Progress(18) at 2026-11-22 21:17:07: 4,698,093 states generated (4,451,378 s/min), 814,653 distinct states found (753,378 ds/min), 315,871 states left on queue.
+Progress(19) at 2026-11-22 21:18:07: 8,828,861 states generated (4,130,768 s/min), 1,420,265 distinct states found (605,612 ds/min), 471,517 states left on queue.
+Progress(20) at 2026-11-22 21:19:07: 12,955,344 states generated (4,126,483 s/min), 1,959,534 distinct states found (539,269 ds/min), 548,530 states left on queue.
+Progress(21) at 2026-11-22 21:20:07: 16,771,478 states generated (3,816,134 s/min), 2,409,038 distinct states found (449,504 ds/min), 559,844 states left on queue.
+Progress(22) at 2026-11-22 21:21:07: 20,343,513 states generated (3,572,035 s/min), 2,803,644 distinct states found (394,606 ds/min), 515,668 states left on queue.
+Progress(23) at 2026-11-22 21:22:07: 23,797,077 states generated (3,453,564 s/min), 3,192,005 distinct states found (388,361 ds/min), 476,093 states left on queue.
+Progress(24) at 2026-11-22 21:23:07: 27,489,881 states generated (3,692,804 s/min), 3,575,774 distinct states found (383,769 ds/min), 385,880 states left on queue.
+Progress(25) at 2026-11-22 21:24:07: 31,256,952 states generated (3,767,071 s/min), 3,937,891 distinct states found (362,117 ds/min), 241,072 states left on queue.
+Progress(30) at 2026-11-22 21:24:55: 34,474,846 states generated, 4,207,410 distinct states found, 0 states left on queue.
+Checking 2 branches of temporal properties for the complete state space with 8414820 total distinct states at (2026-11-22 21:24:55)
+Run stopped after about 8 h 45 min of liveness checking without a verdict. The one-call result is in x2_Live1.txt.
