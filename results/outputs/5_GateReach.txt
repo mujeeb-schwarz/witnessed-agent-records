@@ -1,0 +1,110 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 34 and seed -7642576121598411731 with 10 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 33937] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file results/GateReach.tla
+Parsing file model/Gate.tla
+Parsing file /private<tmp>/Naturals.tla
+Parsing file /private<tmp>/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Gate
+Semantic processing of module GateReach
+Starting... (2026-11-23 11:05:45)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 11:05:45.
+Error: Invariant NoCallEverStarts is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "idle" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 2: <Propose line 124, col 5 to line 127, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 3: <Propose line 124, col 5 to line 127, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "proposed" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 4: <WriteInJournal line 131, col 5 to line 135, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "journaled" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 5: <SendFingerprint line 141, col 5 to line 146, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 6: <WitnessStamps line 155, col 5 to line 160, col 48 of module Gate>
+/\ witnessList = <<<<"fingerprint", a1>>>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {<<"fingerprint", a1>>}
+
+State 7: <StampArrives line 167, col 5 to line 172, col 61 of module Gate>
+/\ witnessList = <<<<"fingerprint", a1>>>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {<<"fingerprint", a1>>}
+/\ status = (a1 :> "waiting" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {<<"fingerprint", a1>>}
+
+State 8: <Run line 178, col 5 to line 184, col 48 of module Gate>
+/\ witnessList = <<<<"fingerprint", a1>>>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {a1}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a1, kind |-> "approved"]}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {<<"fingerprint", a1>>}
+/\ status = (a1 :> "ran" @@ a2 :> "proposed" @@ a3 :> "idle")
+/\ stampsInFlight = {<<"fingerprint", a1>>}
+
+1787 states generated, 829 distinct states found, 409 states left on queue.
+The depth of the complete state graph search is 8.
+The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 8 and the 95th percentile is 5).
+Finished in 00s at (2026-11-23 11:05:45)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

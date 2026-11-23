@@ -1,0 +1,68 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 89 and seed 6406231313241457858 with 10 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 36789] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file model/wrong/WrongWaitsForever.tla
+Parsing file model/GateLive.tla
+Parsing file model/Gate.tla
+Parsing file /private<tmp>/Naturals.tla
+Parsing file /private<tmp>/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Gate
+Semantic processing of module GateLive
+Semantic processing of module WrongWaitsForever
+Starting... (2026-11-23 11:07:53)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 11:07:53.
+Error: Action property CrashRefusesUndecided is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "idle")
+/\ stampsInFlight = {}
+
+State 2: <Propose line 124, col 5 to line 127, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "proposed")
+/\ stampsInFlight = {}
+
+State 3: <WriteInJournal line 131, col 5 to line 135, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "journaled")
+/\ stampsInFlight = {}
+
+State 4: <GateCrashNoRefusal line 17, col 5 to line 23, col 35 of module WrongWaitsForever>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "journaled")
+/\ stampsInFlight = {}
+
+80 states generated, 57 distinct states found, 25 states left on queue.
+The depth of the complete state graph search is 6.
+The average outdegree of the complete state graph is 2 (minimum is 1, the maximum 4 and the 95th percentile is 4).
+Finished in 00s at (2026-11-23 11:07:53)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

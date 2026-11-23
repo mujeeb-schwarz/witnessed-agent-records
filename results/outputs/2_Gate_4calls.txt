@@ -1,0 +1,26 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 0 and seed -279427430838120219 with 10 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 32385] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file model/Gate.tla
+Parsing file /private<tmp>/Naturals.tla
+Parsing file /private<tmp>/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Gate
+Starting... (2026-11-23 11:03:14)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 11:03:14.
+Progress(19) at 2026-11-23 11:03:17: 5,206,658 states generated (5,206,658 s/min), 1,108,369 distinct states found (1,108,369 ds/min), 420,374 states left on queue.
+Progress(27) at 2026-11-23 11:04:17: 100,102,329 states generated (94,895,671 s/min), 15,241,705 distinct states found (14,133,336 ds/min), 3,123,540 states left on queue.
+Progress(30) at 2026-11-23 11:05:17: 164,950,095 states generated (64,847,766 s/min), 22,850,790 distinct states found (7,609,085 ds/min), 1,920,632 states left on queue.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 2.4E-4
+  based on the actual fingerprints:  val = 2.3E-5
+195250814 states generated, 25995938 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 35.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 14 and the 95th percentile is 4).
+Finished in 02min 28s at (2026-11-23 11:05:43)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

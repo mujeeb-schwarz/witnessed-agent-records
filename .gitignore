@@ -1,0 +1,5 @@
+states/
+*.st
+__pycache__/
+.claude/
+.tmp_tests/

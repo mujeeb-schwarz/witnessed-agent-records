@@ -1,0 +1,66 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 92 and seed -2270514697791365817 with 10 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 34253] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file model/wrong/WrongFingerprintBeforeJournal.tla
+Parsing file model/Gate.tla
+Parsing file /private<tmp>/Naturals.tla
+Parsing file /private<tmp>/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Gate
+Semantic processing of module WrongFingerprintBeforeJournal
+Starting... (2026-11-23 11:06:27)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 11:06:27.
+Error: Invariant Check3 is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "idle" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 2: <Propose line 124, col 5 to line 127, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "proposed" @@ a2 :> "idle" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 3: <SendBeforeJournal line 16, col 5 to line 20, col 61 of module WrongFingerprintBeforeJournal>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "idle" @@ a3 :> "idle")
+/\ stampsInFlight = {}
+
+State 4: <WitnessStamps line 155, col 5 to line 160, col 48 of module Gate>
+/\ witnessList = <<<<"fingerprint", a1>>>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "idle" @@ a3 :> "idle")
+/\ stampsInFlight = {<<"fingerprint", a1>>}
+
+306 states generated, 211 distinct states found, 142 states left on queue.
+The depth of the complete state graph search is 6.
+The average outdegree of the complete state graph is 4 (minimum is 0, the maximum 8 and the 95th percentile is 7).
+Finished in 00s at (2026-11-23 11:06:27)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true

@@ -1,0 +1,150 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 67 and seed 1145191623610746574 with 10 workers on 10 cores with 6144MB heap and 64MB offheap memory [pid: 33936] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 25.0.5 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file model/wrong/WrongWaitsForever.tla
+Parsing file model/GateLive.tla
+Parsing file model/Gate.tla
+Parsing file /private<tmp>/Naturals.tla
+Parsing file /private<tmp>/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Gate
+Semantic processing of module GateLive
+Semantic processing of module WrongWaitsForever
+Starting... (2026-11-23 11:05:44)
+Implied-temporal checking--satisfiability problem has 2 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-11-23 11:05:44.
+Progress(19) at 2026-11-23 11:05:44: 8,606 states generated, 2,346 distinct states found, 0 states left on queue.
+Checking 2 branches of temporal properties for the complete state space with 4692 total distinct states at (2026-11-23 11:05:44)
+Error: Temporal properties were violated.
+
+Error: The following behavior constitutes a counter-example:
+
+State 1: <Initial predicate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "idle")
+/\ stampsInFlight = {}
+
+State 2: <Propose line 124, col 5 to line 127, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "idle" @@ a2 :> "proposed")
+/\ stampsInFlight = {}
+
+State 3: <Propose line 124, col 5 to line 127, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "proposed" @@ a2 :> "proposed")
+/\ stampsInFlight = {}
+
+State 4: <WriteInJournal line 131, col 5 to line 135, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "journaled" @@ a2 :> "proposed")
+/\ stampsInFlight = {}
+
+State 5: <WriteInJournal line 131, col 5 to line 135, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 0
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "journaled" @@ a2 :> "journaled")
+/\ stampsInFlight = {}
+
+State 6: <GateCrashNoRefusal line 17, col 5 to line 23, col 35 of module WrongWaitsForever>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "journaled" @@ a2 :> "journaled")
+/\ stampsInFlight = {}
+
+State 7: <SendFingerprint line 141, col 5 to line 146, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a1>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "journaled")
+/\ stampsInFlight = {}
+
+State 8: <SendFingerprint line 141, col 5 to line 146, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a1>>, <<"fingerprint", a2>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "waiting")
+/\ stampsInFlight = {}
+
+State 9: <LoseFingerprint line 200, col 5 to line 203, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 0
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a2>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "waiting")
+/\ stampsInFlight = {}
+
+State 10: <WitnessCrash line 237, col 5 to line 240, col 57 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 1
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {<<"fingerprint", a2>>}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "waiting")
+/\ stampsInFlight = {}
+
+State 11: <LoseFingerprint line 200, col 5 to line 203, col 61 of module Gate>
+/\ witnessList = <<>>
+/\ gateCrashes = 1
+/\ witnessCrashes = 1
+/\ effects = {}
+/\ journal = {[action |-> a1, kind |-> "intent"], [action |-> a2, kind |-> "intent"]}
+/\ fpInFlight = {}
+/\ stampsHeld = {}
+/\ status = (a1 :> "waiting" @@ a2 :> "waiting")
+/\ stampsInFlight = {}
+
+State 12: Stuttering
+Finished checking temporal properties in 00s at 2026-11-23 11:05:44
+8606 states generated, 2346 distinct states found, 0 states left on queue.
+Finished in 00s at (2026-11-23 11:05:44)
+Picked up JAVA_TOOL_OPTIONS: -Djava.net.preferIPv4Stack=true
